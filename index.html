@@ -572,20 +572,17 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
-    <script>
+<script>
   document.addEventListener("DOMContentLoaded", function () {
-    if (/Android/i.test(navigator.userAgent)) {
-      document.body.classList.add("android-device");
+    if (window.innerWidth < 768) {
+      var $slider = $('.home-slider');
+      if ($slider.hasClass('owl-carousel')) {
+        $slider.trigger('destroy.owl.carousel');
+        $slider.removeClass('owl-carousel owl-loaded');
+        $slider.find('.owl-stage-outer').children().unwrap(); // remove Owl wrapper
+        $slider.find('.owl-item').children().unwrap();         // remove Owl item wrapper
+      }
     }
-
-    // Optional: Fix mobile vh unit if you're using --vh
-    function setVhUnit() {
-      let vh = window.innerHeight * 0.01;
-      document.documentElement.style.setProperty('--vh', `${vh}px`);
-    }
-
-    setVhUnit();
-    window.addEventListener('resize', setVhUnit);
   });
 </script>
 </body>
