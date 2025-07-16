@@ -26,21 +26,7 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
-<style>
-  @media (max-width: 768px) {
-    .slider-item.js-fullheight.lazy-bg-auto.bg-loaded {
-      height: auto !important;
-      min-height: 100vh !important;
-      overflow: visible !important;
-    }
-  }
 
-  body.android-device .slider-item.js-fullheight.lazy-bg-auto.bg-loaded {
-    height: auto !important;
-    min-height: 100vh !important;
-    overflow: visible !important;
-  }
-</style>
 
 </head>
   <body>
@@ -72,8 +58,8 @@
         <div class="container">
           <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-end" data-scrollax-parent="true">
           <div class="col-md-7 text ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-            <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">We Build  Amazing Kitchens </h1>
-            <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+            <h1 class="mb-4" >We Build  Amazing Kitchens </h1>
+            <p >A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
             <p><a href="./project.html" class="btn btn-white btn-outline-white px-4 py-3 mt-3">View our works</a></p>
           </div>
         </div>
@@ -84,9 +70,9 @@
       	<div class="overlay"></div>
         <div class="container">
           <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-end" data-scrollax-parent="true">
-          <div class="col-md-7 text ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-            <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Virtually Build Your House</h1>
-            <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p><p><a href="#" class="btn btn-white btn-outline-white px-4 py-3 mt-3">View our works</a></p>
+          <div class="col-md-7 text ftco-animate">
+            <h1 class="mb-4" >Virtually Build Your House</h1>
+            <p >A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p><p><a href="#" class="btn btn-white btn-outline-white px-4 py-3 mt-3">View our works</a></p>
           </div>
         </div>
         </div>
@@ -572,38 +558,7 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    function disableCarouselOnMobile() {
-      if (window.innerWidth < 768) {
-        // Destroy Owl Carousel
-        var $slider = $('.home-slider');
-        if ($slider.hasClass('owl-carousel')) {
-          $slider.trigger('destroy.owl.carousel');
-          $slider.removeClass('owl-carousel owl-loaded');
-          $slider.find('.owl-stage-outer').children().unwrap(); // remove stage wrapper
-          $slider.find('.owl-item').children().unwrap();         // remove item wrapper
-        }
 
-        // Remove height restriction that causes scroll blocking
-        document.querySelectorAll('.js-fullheight').forEach(el => {
-          el.classList.remove('js-fullheight');
-          el.style.height = 'auto';
-          el.style.minHeight = 'unset';
-        });
-
-        // Remove fixed class that causes background lock
-        document.body.style.overflowY = 'auto';
-        document.documentElement.style.overflowY = 'auto';
-      }
-    }
-
-    disableCarouselOnMobile();
-
-    // Optional: re-run on resize
-    window.addEventListener('resize', disableCarouselOnMobile);
-  });
-</script>
 
 </body>
 </html>
