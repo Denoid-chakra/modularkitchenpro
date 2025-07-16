@@ -561,19 +561,26 @@
 
     
 <script>
-if (/Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+// if (/Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+//   const carousel = document.querySelector('.owl-carousel');
+//   if (carousel) {
+//     // Prevent touch interactions
+//     carousel.addEventListener('touchstart', function(e) {
+//       e.preventDefault();
+//     }, { passive: false });
+
+//     carousel.addEventListener('touchmove', function(e) {
+//       e.preventDefault();
+//     }, { passive: false });
+//   }
+// }
+if (window.innerWidth <= 768) {
   const carousel = document.querySelector('.owl-carousel');
   if (carousel) {
-    // Prevent touch interactions
-    carousel.addEventListener('touchstart', function(e) {
-      e.preventDefault();
-    }, { passive: false });
-
-    carousel.addEventListener('touchmove', function(e) {
-      e.preventDefault();
-    }, { passive: false });
+    carousel.style.touchAction = 'none';
   }
 }
+
 
 
 </script>
