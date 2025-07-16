@@ -562,21 +562,17 @@
     
 <script>
 if (/Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
-  const owl = $('.owl-carousel');
-  if (owl.hasClass('owl-loaded')) {
-    owl.trigger('destroy.owl.carousel'); // destroy current instance
-  }
+  const carousel = document.querySelector('.owl-carousel');
+  if (carousel) {
+    // Prevent touch interactions
+    carousel.addEventListener('touchstart', function(e) {
+      e.preventDefault();
+    }, { passive: false });
 
-  // Re-init with drag disabled
-  owl.owlCarousel({
-    items: 1,
-    loop: true,
-    touchDrag: false,
-    mouseDrag: false,
-    pullDrag: false,
-    nav: true,
-    dots: true
-  });
+    carousel.addEventListener('touchmove', function(e) {
+      e.preventDefault();
+    }, { passive: false });
+  }
 }
 
 
