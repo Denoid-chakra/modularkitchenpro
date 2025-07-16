@@ -27,19 +27,14 @@
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
 <style>
-  .js-fullheight {
+  @media (max-width: 568px) {
+  .slider-item.js-fullheight.lazy-bg-auto.bg-loaded {
     height: auto !important;
-    min-height: 100vh;
+    min-height: 100vh !important;
+    overflow: visible !important;
   }
+}
 
-  @media (max-width: 768px) {
-   .home-slider{
-display:None}
-    .js-fullheight {
-      height: auto !important;
-      min-height: calc(var(--vh, 1vh) * 100);
-    }
-  }
 </style>
 
 </head>
