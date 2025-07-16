@@ -568,13 +568,20 @@
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
     
-  <script>
-  function setFullHeight() {
-    const vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty('--vh', `${vh}px`);
+<script>
+  if (/Mobi|Android/i.test(navigator.userAgent)) {
+  const carousel = document.querySelector('.owl-carousel');
+  if (carousel) {
+    carousel.style.display = 'none';
+
+    // Add margin to the next sibling after the carousel
+    const nextEl = carousel.nextElementSibling;
+    if (nextEl) {
+      nextEl.style.marginTop = '10px';
+    }
   }
-  window.addEventListener('resize', setFullHeight);
-  window.addEventListener('load', setFullHeight);
+}
+
 </script>
 </body>
 </html>
