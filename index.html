@@ -27,14 +27,19 @@
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
 <style>
-  @media (max-width: 568px) {
-  .slider-item.js-fullheight.lazy-bg-auto.bg-loaded {
+  @media (max-width: 768px) {
+    .slider-item.js-fullheight.lazy-bg-auto.bg-loaded {
+      height: auto !important;
+      min-height: 100vh !important;
+      overflow: visible !important;
+    }
+  }
+
+  body.android-device .slider-item.js-fullheight.lazy-bg-auto.bg-loaded {
     height: auto !important;
     min-height: 100vh !important;
     overflow: visible !important;
   }
-}
-
 </style>
 
 </head>
@@ -566,14 +571,21 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
-    
-  <script>
-  function setFullHeight() {
-    const vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty('--vh', `${vh}px`);
-  }
-  window.addEventListener('resize', setFullHeight);
-  window.addEventListener('load', setFullHeight);
+    <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    if (/Android/i.test(navigator.userAgent)) {
+      document.body.classList.add("android-device");
+    }
+
+    // Optional: Fix mobile vh unit if you're using --vh
+    function setVhUnit() {
+      let vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+    }
+
+    setVhUnit();
+    window.addEventListener('resize', setVhUnit);
+  });
 </script>
 </body>
 </html>
