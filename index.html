@@ -26,14 +26,16 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
-  <style>
+<style>
   .js-fullheight {
-    height: 100dvh !important;
+    height: auto !important;
+    min-height: 100vh;
   }
 
-  @supports not (height: 100dvh) {
+  @media (max-width: 768px) {
     .js-fullheight {
-      height: calc(var(--vh, 1vh) * 100) !important;
+      height: auto !important;
+      min-height: calc(var(--vh, 1vh) * 100);
     }
   }
 </style>
