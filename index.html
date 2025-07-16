@@ -559,6 +559,22 @@
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
 
+    
+<script>
+  if (/Mobi|Android/i.test(navigator.userAgent)) {
+  const carousel = document.querySelector('.owl-carousel');
+  if (carousel) {
+    carousel.style.display = 'none';
+
+    // Add margin to the next sibling after the carousel
+    const nextEl = carousel.nextElementSibling;
+    if (nextEl) {
+      nextEl.style.marginTop = '10px';
+    }
+  }
+}
+
+</script>
 
 </body>
 </html>
