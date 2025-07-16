@@ -574,16 +574,36 @@
   <script src="js/main.js"></script>
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    if (window.innerWidth < 768) {
-      var $slider = $('.home-slider');
-      if ($slider.hasClass('owl-carousel')) {
-        $slider.trigger('destroy.owl.carousel');
-        $slider.removeClass('owl-carousel owl-loaded');
-        $slider.find('.owl-stage-outer').children().unwrap(); // remove Owl wrapper
-        $slider.find('.owl-item').children().unwrap();         // remove Owl item wrapper
+    function disableCarouselOnMobile() {
+      if (window.innerWidth < 768) {
+        // Destroy Owl Carousel
+        var $slider = $('.home-slider');
+        if ($slider.hasClass('owl-carousel')) {
+          $slider.trigger('destroy.owl.carousel');
+          $slider.removeClass('owl-carousel owl-loaded');
+          $slider.find('.owl-stage-outer').children().unwrap(); // remove stage wrapper
+          $slider.find('.owl-item').children().unwrap();         // remove item wrapper
+        }
+
+        // Remove height restriction that causes scroll blocking
+        document.querySelectorAll('.js-fullheight').forEach(el => {
+          el.classList.remove('js-fullheight');
+          el.style.height = 'auto';
+          el.style.minHeight = 'unset';
+        });
+
+        // Remove fixed class that causes background lock
+        document.body.style.overflowY = 'auto';
+        document.documentElement.style.overflowY = 'auto';
       }
     }
+
+    disableCarouselOnMobile();
+
+    // Optional: re-run on resize
+    window.addEventListener('resize', disableCarouselOnMobile);
   });
 </script>
+
 </body>
 </html>
