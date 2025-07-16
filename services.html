@@ -210,6 +210,54 @@
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const elementsWithBg = [];
+
+    // Find all elements with inline background-image styles
+    document.querySelectorAll("*").forEach(el => {
+      const bg = window.getComputedStyle(el).getPropertyValue("background-image");
+      if (bg && bg !== 'none' && bg.includes('url')) {
+        const urlMatch = bg.match(/url\(["']?(.*?)["']?\)/);
+        if (urlMatch && urlMatch[1]) {
+          const imageUrl = urlMatch[1];
+
+          // Save the URL and remove the background temporarily
+          el.dataset.bg = imageUrl;
+          el.style.backgroundImage = "none";
+          el.classList.add("lazy-bg-auto");
+
+          elementsWithBg.push(el);
+        }
+      }
+    });
+
+    // Lazy load with IntersectionObserver
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const el = entry.target;
+            const imageUrl = el.dataset.bg;
+            if (imageUrl) {
+              el.style.backgroundImage = `url('${imageUrl}')`;
+              el.classList.add("bg-loaded");
+              observer.unobserve(el);
+            }
+          }
+        });
+      });
+
+      elementsWithBg.forEach(el => observer.observe(el));
+    } else {
+      // Fallback: load all immediately
+      elementsWithBg.forEach(el => {
+        const imageUrl = el.dataset.bg;
+        el.style.backgroundImage = `url('${imageUrl}')`;
+      });
+    }
+  });
+</script>
 
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
