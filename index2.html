@@ -249,7 +249,7 @@
 
   <!-- Carousel Init & Mobile Fix -->
   <script>
-    $(document).ready(function(){
+$(document).ready(function(){
   $(".owl-carousel").owlCarousel({
     items:1,
     loop:true,
@@ -261,27 +261,26 @@
     freeDrag:false
   });
 
-  // Detect vertical scroll vs horizontal swipe
-  let startX, startY, moveX, moveY;
-  const carousel = $('.owl-carousel');
-
-  carousel.on('touchstart', function(e){
+  // Fix vertical scroll on mobile
+  let startX, startY;
+  $(".owl-carousel").on("touchstart", function(e){
     const touch = e.originalEvent.touches[0];
-    startX = touch.clientX;
-    startY = touch.clientY;
+    startX = touch.pageX;
+    startY = touch.pageY;
   });
 
-  carousel.on('touchmove', function(e){
+  $(".owl-carousel").on("touchmove", function(e){
     const touch = e.originalEvent.touches[0];
-    moveX = touch.clientX - startX;
-    moveY = touch.clientY - startY;
+    const diffX = touch.pageX - startX;
+    const diffY = touch.pageY - startY;
 
-    // If vertical movement is bigger than horizontal, allow scrolling
-    if(Math.abs(moveY) > Math.abs(moveX)){
-      e.stopPropagation(); // allow vertical scroll
+    // If vertical movement is greater than horizontal, allow scroll
+    if(Math.abs(diffY) > Math.abs(diffX)){
+      e.stopImmediatePropagation(); // Stop carousel from handling
     }
   });
 });
+
 
     // Lazy background images
     document.addEventListener("DOMContentLoaded", function () {
