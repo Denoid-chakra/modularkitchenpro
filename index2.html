@@ -250,15 +250,38 @@
   <!-- Carousel Init & Mobile Fix -->
   <script>
     $(document).ready(function(){
-      $(".owl-carousel").owlCarousel({
-        items:1,
-        loop:true,
-        autoplay:true,
-        autoplayTimeout:5000,
-        touchDrag:true,
-        mouseDrag:true
-      });
-    });
+  $(".owl-carousel").owlCarousel({
+    items:1,
+    loop:true,
+    autoplay:true,
+    autoplayTimeout:5000,
+    mouseDrag:true,
+    touchDrag:true,
+    pullDrag:true,
+    freeDrag:false
+  });
+
+  // Detect vertical scroll vs horizontal swipe
+  let startX, startY, moveX, moveY;
+  const carousel = $('.owl-carousel');
+
+  carousel.on('touchstart', function(e){
+    const touch = e.originalEvent.touches[0];
+    startX = touch.clientX;
+    startY = touch.clientY;
+  });
+
+  carousel.on('touchmove', function(e){
+    const touch = e.originalEvent.touches[0];
+    moveX = touch.clientX - startX;
+    moveY = touch.clientY - startY;
+
+    // If vertical movement is bigger than horizontal, allow scrolling
+    if(Math.abs(moveY) > Math.abs(moveX)){
+      e.stopPropagation(); // allow vertical scroll
+    }
+  });
+});
 
     // Lazy background images
     document.addEventListener("DOMContentLoaded", function () {
