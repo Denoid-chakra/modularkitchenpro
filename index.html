@@ -28,14 +28,54 @@
     <link rel="stylesheet" href="css/style.css">
 
     <style>
-      /* Allows touches to pass through the dark overlay so you can swipe the images */
-      .slider-item .overlay {
-          pointer-events: none; 
+      /* --- MOBILE FIX START --- */
+      
+      /* 1. Hide the carousel on mobile devices (phones & tablets) */
+      @media (max-width: 991px) {
+        .home-slider.owl-carousel {
+          display: none !important;
+        }
+        
+        /* 2. Show the static image section on mobile */
+        .mobile-hero-static {
+          display: block !important;
+          height: 100vh;
+          min-height: 600px;
+          background-size: cover;
+          background-position: center center;
+          position: relative;
+        }
+
+        /* Adjust text size for mobile so it fits nicely */
+        .mobile-hero-static h1 {
+          font-size: 40px;
+          line-height: 1.2;
+          color: #fff;
+        }
+        
+        .mobile-hero-static .overlay {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background: rgba(0, 0, 0, 0.4); /* Darkens image so text is readable */
+        }
+        
+        .mobile-hero-static .container {
+          height: 100%;
+          display: flex;
+          align-items: center;
+        }
       }
-      /* Allows you to scroll the page UP/DOWN even when touching the carousel */
-      .owl-carousel {
-          touch-action: pan-y !important; 
+
+      /* On Desktop, hide the static section */
+      @media (min-width: 992px) {
+        .mobile-hero-static {
+          display: none !important;
+        }
       }
+      /* --- MOBILE FIX END --- */
     </style>
 
 </head>
@@ -60,7 +100,6 @@
 	      </div>
 	    </div>
 	  </nav>
-    <div>
     <section class="home-slider js-fullheight owl-carousel">
       <div class="slider-item js-fullheight" style="background-image:url(images/bg_1.webp);">
       	<div class="overlay"></div>
@@ -87,7 +126,19 @@
         </div>
       </div>
     </section>
-	    </div>
+
+    <section class="mobile-hero-static" style="background-image:url(images/bg_1.webp);">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-end">
+          <div class="col-md-7 text">
+            <h1 class="mb-4">We Build Amazing Kitchens</h1>
+            <p class="mb-4" style="color: rgba(255,255,255,0.9);">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+            <p><a href="./project.html" class="btn btn-white btn-outline-white px-4 py-3">View our works</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
 		
 		<section class="ftco-services bg-light">
 			<div class="container">
@@ -565,5 +616,7 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
+
+
 </body>
 </html>
