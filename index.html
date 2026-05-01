@@ -1,622 +1,314 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Modular Kitchen</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
-
-    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="css/animate.css">
-    
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-
-    <link rel="stylesheet" href="css/aos.css">
-
-    <link rel="stylesheet" href="css/ionicons.min.css">
-
-    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
-    <link rel="stylesheet" href="css/jquery.timepicker.css">
-
-    
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/icomoon.css">
-    <link rel="stylesheet" href="css/style.css">
-
-    <style>
-      /* --- MOBILE FIX START --- */
-      
-      /* 1. Hide the carousel on mobile devices (phones & tablets) */
-      @media (max-width: 991px) {
-        .home-slider.owl-carousel {
-          display: none !important;
-        }
-        
-        /* 2. Show the static image section on mobile */
-        .mobile-hero-static {
-          display: block !important;
-          height: 100vh;
-          min-height: 600px;
-          background-size: cover;
-          background-position: center center;
-          position: relative;
-        }
-
-        /* Adjust text size for mobile so it fits nicely */
-        .mobile-hero-static h1 {
-          font-size: 40px;
-          line-height: 1.2;
-          color: #fff;
-        }
-        
-        .mobile-hero-static .overlay {
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          background: rgba(0, 0, 0, 0.4); /* Darkens image so text is readable */
-        }
-        
-        .mobile-hero-static .container {
-          height: 100%;
-          display: flex;
-          align-items: center;
-        }
-      }
-
-      /* On Desktop, hide the static section */
-      @media (min-width: 992px) {
-        .mobile-hero-static {
-          display: none !important;
-        }
-      }
-      /* --- MOBILE FIX END --- */
-    </style>
-
-</head>
-  <body>
-    
-	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-	    <div class="container">
-	      <a class="navbar-brand" href="index.html">Modular Kitchen Pro</a>
-	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> Menu
-	      </button>
-
-	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav ml-auto">
-	        	<li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
-	        	<li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-	        	<li class="nav-item"><a href="project.html" class="nav-link">Project</a></li>
-	        	<li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
-	        	<li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-	        </ul>
-	      </div>
-	    </div>
-	  </nav>
-    <section class="home-slider js-fullheight owl-carousel">
-      <div class="slider-item js-fullheight" style="background-image:url(images/bg_1.webp);">
-      	<div class="overlay"></div>
-        <div class="container">
-          <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-end" data-scrollax-parent="true">
-          <div class="col-md-7 text ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-            <h1 class="mb-4" >We Build  Amazing Kitchens </h1>
-            <p >A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-            <p><a href="./project.html" class="btn btn-white btn-outline-white px-4 py-3 mt-3">View our works</a></p>
-          </div>
-        </div>
-        </div>
-      </div>
-
-      <div class="slider-item js-fullheight" style="background-image:url(images/bg_2.webp);">
-      	<div class="overlay"></div>
-        <div class="container">
-          <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-end" data-scrollax-parent="true">
-          <div class="col-md-7 text ftco-animate">
-            <h1 class="mb-4" >Virtually Build Your House</h1>
-            <p >A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p><p><a href="#" class="btn btn-white btn-outline-white px-4 py-3 mt-3">View our works</a></p>
-          </div>
-        </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="mobile-hero-static" style="background-image:url(images/bg_1.webp);">
-      <div class="overlay"></div>
-      <div class="container">
-        <div class="row no-gutters slider-text align-items-center justify-content-end">
-          <div class="col-md-7 text">
-            <h1 class="mb-4">We Build Amazing Kitchens</h1>
-            <p class="mb-4" style="color: rgba(255,255,255,0.9);">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-            <p><a href="./project.html" class="btn btn-white btn-outline-white px-4 py-3">View our works</a></p>
-          </div>
-        </div>
-      </div>
-    </section>
-		
-		<section class="ftco-services bg-light">
-			<div class="container">
-				<div class="row">
-          <div class="col-md-4 d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 services d-block">
-              <div class="icon d-flex justify-content-center align-items-center">
-            		<span class="flaticon-idea"></span>
-              </div>
-              <div class="media-body p-2 mt-3">
-                <h3 class="heading">Perfectly Design</h3>
-                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
-              </div>
-            </div>      
-          </div>
-          <div class="col-md-4 d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 services d-block">
-              <div class="icon d-flex justify-content-center align-items-center">
-            		<span class="flaticon-compass-symbol"></span>
-              </div>
-              <div class="media-body p-2 mt-3">
-                <h3 class="heading">Carefully Planned</h3>
-                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
-              </div>
-            </div>    
-          </div>
-          <div class="col-md-4 d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 services d-block">
-              <div class="icon d-flex justify-content-center align-items-center">
-            		<span class="flaticon-layers"></span>
-              </div>
-              <div class="media-body p-2 mt-3">
-                <h3 class="heading">Smartly Execute</h3>
-                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
-              </div>
-            </div>      
-          </div>
-        </div>
-			</div>
-		</section>
-
-		<section class="ftco-section ftc-no-pb">
-			<div class="container">
-				<div class="row no-gutters">
-					<div class="col-md-5 p-md-5 img img-2" style="background-image: url(images/about.webp);">
-					</div>
-					<div class="col-md-7 wrap-about pb-md-5 ftco-animate">
-	          <div class="heading-section mb-5 pl-md-5 heading-section-with-line">
-	          	<div class="pl-md-5 ml-md-5">
-		          	<span class="subheading">About</span>
-		            <h2 class="mb-4">We are the best  in Dwarka, Delhi </h2>
-	            </div>
-	          </div>
-	          <div class="pl-md-5 ml-md-5 mb-5">
-							<p>On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word "and" and the Little Blind Text should turn around and return to its own, safe country. But nothing the copy said could convince her and so it didn’t take long until a few insidious Copy Writers ambushed her, made her drunk with Longe and Parole and dragged her into their agency, where they abused her for their.</p>
-							<p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way.</p>
-							<p><a href="#" class="btn-custom">Learn More <span class="ion-ios-arrow-forward"></span></a></p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-
-		<section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url(images/bg_3.webp);" data-stellar-background-ratio="0.5">
-    	<div class="container">
-    		<div class="row d-md-flex align-items-center justify-content-center">
-    			<div class="col-lg-4">
-    				<div class="heading-section pl-md-5 heading-section-white">
-	          	<div class="pl-md-5 ml-md-5 ftco-animate">
-		          	<span class="subheading">Some</span>
-		            <h2 class="mb-4">Interesting Facts</h2>
-	            </div>
-	          </div>
-    			</div>
-    			<div class="col-lg-8">
-    				<div class="row d-md-flex align-items-center">
-		          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-		            <div class="block-18 text-center">
-		              <div class="text">
-		                <strong class="number" data-number="18">0</strong>
-		                <span>Years of Experienced</span>
-		              </div>
-		            </div>
-		          </div>
-		          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-		            <div class="block-18 text-center">
-		              <div class="text">
-		                <strong class="number" data-number="351">0</strong>
-		                <span>Happy Clients</span>
-		              </div>
-		            </div>
-		          </div>
-		          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-		            <div class="block-18 text-center">
-		              <div class="text">
-		                <strong class="number" data-number="564">0</strong>
-		                <span>Finished Projects</span>
-		              </div>
-		            </div>
-		          </div>
-		          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-		            <div class="block-18 text-center">
-		              <div class="text">
-		                <strong class="number" data-number="300">0</strong>
-		                <span>Working Days</span>
-		              </div>
-		            </div>
-		          </div>
-	          </div>
-          </div>
-        </div>
-    	</div>
-    </section>
-
-    <section class="ftco-section">
-    	<div class="container">
-    		<div class="row justify-content-center mb-5 pb-2">
-          <div class="col-md-7 heading-section ftco-animate">
-            <h2 class="mb-4">Our Projects</h2>
-            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences</p>
-          </div>
-        </div>
-    	</div>
-    	<div class="container-wrap">
-    		<div class="row no-gutters">
-    			<div class="col-md-6 col-lg-3 ftco-animate">
-    				<div class="project">
-	    				<img src="images/work-1.webp" class="img-fluid" alt="Colorlib Template">
-	    				<div class="text">
-	    					<h3>Office Interior Design in Paris</h3>
-	    				</div>
-	    				<a href="images/work-1.webp" class="icon image-popup d-flex justify-content-center align-items-center">
-	    					<span class="icon-expand"></span>
-	    				</a>
-    				</div>
-    			</div>
-    			<div class="col-md-6 col-lg-3 ftco-animate">
-    				<div class="project">
-	    				<img src="images/work-2.webp" class="img-fluid" alt="Colorlib Template">
-	    				<div class="text">
-	    					<h3>Office Interior Design in Paris</h3>
-	    				</div>
-	    				<a href="images/work-2.webp" class="icon image-popup d-flex justify-content-center align-items-center">
-	    					<span class="icon-expand"></span>
-	    				</a>
-    				</div>
-    			</div>
-    			<div class="col-md-6 col-lg-3 ftco-animate">
-    				<div class="project">
-	    				<img src="images/work-3.webp" class="img-fluid" alt="Colorlib Template">
-	    				<div class="text">
-	    					<h3>Office Interior Design in Paris</h3>
-	    				</div>
-	    				<a href="images/work-3.webp" class="icon image-popup d-flex justify-content-center align-items-center">
-	    					<span class="icon-expand"></span>
-	    				</a>
-    				</div>
-    			</div>
-    			<div class="col-md-6 col-lg-3 ftco-animate">
-    				<div class="project">
-	    				<img src="images/work-4.webp" class="img-fluid" alt="Colorlib Template">
-	    				<div class="text">
-	    					<h3>Office Interior Design in Paris</h3>
-	    				</div>
-	    				<a href="images/work-4.webp" class="icon image-popup d-flex justify-content-center align-items-center">
-	    					<span class="icon-expand"></span>
-	    				</a>
-    				</div>
-    			</div>
-    		</div>
-    	</div>
-    </section>
-
-    <section class="ftco-section testimony-section">
-      <div class="container">
-        <div class="row justify-content-center mb-5 pb-3">
-          <div class="col-md-7 heading-section ftco-animate">
-            <h2 class="mb-4">Our satisfied customer says</h2>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in</p>
-          </div>
-        </div>
-        <div class="row ftco-animate">
-          <div class="col-md-12">
-            <div class="carousel-testimony owl-carousel">
-              <div class="item">
-                <div class="testimony-wrap p-4 pb-5">
-                  <div class="user-img mb-5" style="background-image: url(images/person_1.webp)">
-                    <span class="quote d-flex align-items-center justify-content-center">
-                      <i class="icon-quote-left"></i>
-                    </span>
-                  </div>
-                  <div class="text">
-                    <p class="mb-5 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <p class="name">Garreth Smith</p>
-                    <span class="position">Marketing Manager</span>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="testimony-wrap p-4 pb-5">
-                  <div class="user-img mb-5" style="background-image: url(images/person_2.webp)">
-                    <span class="quote d-flex align-items-center justify-content-center">
-                      <i class="icon-quote-left"></i>
-                    </span>
-                  </div>
-                  <div class="text">
-                    <p class="mb-5 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <p class="name">Garreth Smith</p>
-                    <span class="position">Interface Designer</span>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="testimony-wrap p-4 pb-5">
-                  <div class="user-img mb-5" style="background-image: url(images/person_3.webp)">
-                    <span class="quote d-flex align-items-center justify-content-center">
-                      <i class="icon-quote-left"></i>
-                    </span>
-                  </div>
-                  <div class="text">
-                    <p class="mb-5 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <p class="name">Garreth Smith</p>
-                    <span class="position">UI Designer</span>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="testimony-wrap p-4 pb-5">
-                  <div class="user-img mb-5" style="background-image: url(images/person_1.webp)">
-                    <span class="quote d-flex align-items-center justify-content-center">
-                      <i class="icon-quote-left"></i>
-                    </span>
-                  </div>
-                  <div class="text">
-                    <p class="mb-5 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <p class="name">Garreth Smith</p>
-                    <span class="position">Web Developer</span>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="testimony-wrap p-4 pb-5">
-                  <div class="user-img mb-5" style="background-image: url(images/person_1.webp)">
-                    <span class="quote d-flex align-items-center justify-content-center">
-                      <i class="icon-quote-left"></i>
-                    </span>
-                  </div>
-                  <div class="text">
-                    <p class="mb-5 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <p class="name">Garreth Smith</p>
-                    <span class="position">System Analyst</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-			
-
-
-		<section class="ftco-section">
-			<div class="container">
-				<div class="row justify-content-center mb-5 pb-3">
-          <div class="col-md-7 heading-section ftco-animate">
-            <h2 class="mb-4">Recent Blog</h2>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in</p>
-          </div>
-        </div>	
-				<div class="row">
-          <div class="col-md-4 ftco-animate">
-            <div class="blog-entry">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_1.webp');">
-              </a>
-              <div class="text d-flex py-4">
-                <div class="meta mb-3">
-                  <div><a href="#">Sep. 20, 2018</a></div>
-                  <div><a href="#">Admin</a></div>
-                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-                </div>
-                <div class="desc pl-3">
-	                <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-	              </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 ftco-animate">
-            <div class="blog-entry" data-aos-delay="100">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_2.webp');">
-              </a>
-              <div class="text d-flex py-4">
-                <div class="meta mb-3">
-                  <div><a href="#">Sep. 20, 2018</a></div>
-                  <div><a href="#">Admin</a></div>
-                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-                </div>
-                <div class="desc pl-3">
-	                <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-	              </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 ftco-animate">
-            <div class="blog-entry" data-aos-delay="200">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_3.webp');">
-              </a>
-              <div class="text d-flex py-4">
-                <div class="meta mb-3">
-                  <div><a href="#">Sep. 20, 2018</a></div>
-                  <div><a href="#">Admin</a></div>
-                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-                </div>
-                <div class="desc pl-3">
-	                <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-	              </div>
-              </div>
-            </div>
-          </div>
-        </div>
-			</div>
-		</section>
-
-		<section class="ftco-section ftc-no-pb">
-			<div class="container">
-				<div class="row no-gutters">
-					<div class="col-md-5 p-md-5 img img-2 order-md-last" style="background-image: url(images/img.webp);">
-					</div>
-					<div class="col-md-7 wrap-about pb-md-5 ftco-animate">
-	          <div class="heading-section mb-md-5 pl-md-5 heading-section-with-line">
-	          	<div class="pr-md-5 mr-md-5">
-		          	<span class="subheading">Perfect</span>
-		            <h2 class="mb-4">We Make Perfection</h2>
-	            </div>
-	          </div>
-	          <div class="pr-md-5 mr-md-5">
-							<p>On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word "and" and the Little Blind Text should turn around and return to its own, safe country. But nothing the copy said could convince her and so it didn’t take long until a few insidious Copy Writers ambushed her, made her drunk with Longe and Parole and dragged her into their agency, where they abused her for their.</p>
-							<p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way.</p>
-							<p><a href="#" class="btn-custom">Learn More <span class="ion-ios-arrow-forward"></span></a></p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-    <footer class="ftco-footer ftco-bg-dark ftco-section">
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Modular Kitchen Pro</h2>
-              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
-                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4 ml-md-4">
-              <h2 class="ftco-heading-2">Links</h2>
-              <ul class="list-unstyled">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Contact</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md">
-             <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Services</h2>
-              <ul class="list-unstyled">
-                <li><a href="#">Architectural Design</a></li>
-                <li><a href="#">Interior Design</a></li>
-                <li><a href="#">Exterior Design</a></li>
-                <li><a href="#">Lighting Design</a></li>
-                <li><a href="#">AutoCAD Service</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4">
-            	<h2 class="ftco-heading-2">Have a Questions?</h2>
-            	<div class="block-23 mb-3">
-	              <ul>
-	                <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
-	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
-	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
-	              </ul>
-	            </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12 text-center">
-
-            <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved  <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-  </p>
-          </div>
-        </div>
-      </div>
-    </footer>
-    
-  
-
-  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const elementsWithBg = [];
-
-    // Find all elements with inline background-image styles
-    document.querySelectorAll("*").forEach(el => {
-      const bg = window.getComputedStyle(el).getPropertyValue("background-image");
-      if (bg && bg !== 'none' && bg.includes('url')) {
-        const urlMatch = bg.match(/url\(["']?(.*?)["']?\)/);
-        if (urlMatch && urlMatch[1]) {
-          const imageUrl = urlMatch[1];
-
-          // Save the URL and remove the background temporarily
-          el.dataset.bg = imageUrl;
-          el.style.backgroundImage = "none";
-          el.classList.add("lazy-bg-auto");
-
-          elementsWithBg.push(el);
-        }
-      }
-    });
-
-    // Lazy load with IntersectionObserver
-    if ("IntersectionObserver" in window) {
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const el = entry.target;
-            const imageUrl = el.dataset.bg;
-            if (imageUrl) {
-              el.style.backgroundImage = `url('${imageUrl}')`;
-              el.classList.add("bg-loaded");
-              observer.unobserve(el);
-            }
-          }
-        });
-      });
-
-      elementsWithBg.forEach(el => observer.observe(el));
-    } else {
-      // Fallback: load all immediately
-      elementsWithBg.forEach(el => {
-        const imageUrl = el.dataset.bg;
-        el.style.backgroundImage = `url('${imageUrl}')`;
-      });
-    }
-  });
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modular Kitchen | Best Modular Kitchen Designer in Dwarka, Delhi</title>
+<meta name="description" content="Modular Kitchen designs and installs premium modular kitchens in Dwarka, Delhi. 18+ years experience, 564+ completed projects. Get a free home visit & consultation today.">
+<meta name="keywords" content="modular kitchen Dwarka, modular kitchen Delhi, best modular kitchen, kitchen design Delhi, kitchen interior Dwarka, modular kitchen price Delhi">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://modularkitchen.in/">
+<!-- Open Graph -->
+<meta property="og:title" content="Modular Kitchen | Premium Kitchen Designer in Dwarka, Delhi">
+<meta property="og:description" content="18+ years of crafting beautiful, functional modular kitchens across Delhi. Book your free consultation today.">
+<meta property="og:image" content="images/bg_1.webp">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://modularkitchen.in/">
+<!-- Schema.org -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LocalBusiness","name":"Modular Kitchen","description":"Premium modular kitchen designer and installer in Dwarka, Delhi with 18+ years of experience.","email":"modularkitchenwaale@gmail.com","address":{"@type":"PostalAddress","streetAddress":"Dwarka","addressLocality":"New Delhi","addressRegion":"Delhi","addressCountry":"IN"},"url":"https://modularkitchen.in","priceRange":"₹₹₹","openingHours":"Mo-Sa 09:00-18:00","hasMap":"https://maps.google.com/?q=Dwarka,Delhi","aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"351"}}
 </script>
+<link rel="stylesheet" href="css/mk.css">
+</head>
+<body>
 
+<!-- NAV -->
+<nav class="site-nav" id="site-nav" aria-label="Main navigation">
+  <a href="index.html" class="nav-logo" aria-label="Modular Kitchen Home">Modular Kitchen</a>
+  <ul class="nav-links" role="list">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="project.html">Projects</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="contact.html" class="nav-cta">Get Quote</a></li>
+  </ul>
+  <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
 
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/aos.js"></script>
-  <script src="js/jquery.animateNumber.min.js"></script>
-  <script src="js/bootstrap-datepicker.js"></script>
-  <script src="js/jquery.timepicker.min.js"></script>
-  <script src="js/scrollax.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-  <script src="js/google-map.js"></script>
-  <script src="js/main.js"></script>
+<!-- MOBILE MENU -->
+<nav class="nav-mobile" aria-label="Mobile navigation">
+  <button class="nav-close" aria-label="Close menu">&times;</button>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="services.html">Services</a>
+  <a href="project.html">Projects</a>
+  <a href="blog.html">Blog</a>
+  <a href="contact.html">Get Quote</a>
+</nav>
 
+<!-- HERO -->
+<section class="hero" aria-label="Homepage hero">
+  <div class="hero-slide" style="background-image:url('images/bg_1.webp')" role="img" aria-label="Modern modular kitchen design"></div>
+  <div class="hero-slide" style="background-image:url('images/bg_2.webp')" role="img" aria-label="Elegant kitchen interior"></div>
+  <div class="hero-slide" style="background-image:url('images/bg_3.webp')" role="img" aria-label="Premium kitchen craftsmanship"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Dwarka, Delhi — Est. 2006</p>
+    <h1>Kitchens Crafted for<br><em>Indian Homes</em></h1>
+    <p class="hero-sub">Precision-designed modular kitchens that blend timeless aesthetics with everyday functionality.</p>
+    <div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center">
+      <a href="project.html" class="btn btn-gold">View Projects</a>
+      <a href="contact.html" class="btn btn-outline">Book Free Visit</a>
+    </div>
+  </div>
+  <div class="hero-dots" aria-label="Slide navigation">
+    <button class="hero-dot" aria-label="Slide 1"></button>
+    <button class="hero-dot" aria-label="Slide 2"></button>
+    <button class="hero-dot" aria-label="Slide 3"></button>
+  </div>
+</section>
 
+<!-- TAGLINE -->
+<div class="tagline-strip" data-reveal>
+  <p>"Details make perfection &mdash; and perfection is not a detail."</p>
+</div>
+
+<!-- ABOUT SPLIT -->
+<section class="split section-cream" aria-labelledby="about-heading">
+  <div class="split-img" style="background-image:url('images/about.webp')" role="img" aria-label="Kitchen craftsmanship"></div>
+  <div class="split-body">
+    <span class="section-label" data-reveal>About Us</span>
+    <h2 class="section-title" id="about-heading" data-reveal>Delhi&rsquo;s Most Trusted<br>Kitchen Specialists</h2>
+    <div class="divider" data-reveal></div>
+    <p class="section-body" data-reveal>For over 18 years, Modular Kitchen has been transforming homes across Dwarka and Delhi NCR. We design, manufacture and install modular kitchens that are built around how Indian families actually cook — with space for the kadhai, the pressure cooker, the masala dabbas, and everything in between.</p>
+    <p class="section-body mt-3" data-reveal>Every kitchen is designed from scratch, built in our own workshop, and installed by our trained team. No middlemen. No compromise.</p>
+    <a href="about.html" class="btn btn-outline-dark mt-4" data-reveal style="display:inline-block">Our Story</a>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats-bar" aria-label="Key statistics">
+  <div class="stats-grid container">
+    <div data-reveal>
+      <div class="stat-number"><span class="counter-num" data-target="18" data-suffix="+">0</span></div>
+      <div class="stat-label">Years of Experience</div>
+    </div>
+    <div data-reveal>
+      <div class="stat-number"><span class="counter-num" data-target="351">0</span></div>
+      <div class="stat-label">Happy Families</div>
+    </div>
+    <div data-reveal>
+      <div class="stat-number"><span class="counter-num" data-target="564">0</span></div>
+      <div class="stat-label">Kitchens Completed</div>
+    </div>
+    <div data-reveal>
+      <div class="stat-number"><span class="counter-num" data-target="30" data-suffix="+">0</span></div>
+      <div class="stat-label">Skilled Craftsmen</div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS PREVIEW -->
+<section class="section" aria-labelledby="projects-heading">
+  <div class="container text-center" style="margin-bottom:3rem">
+    <span class="section-label" data-reveal>Our Work</span>
+    <h2 class="section-title" id="projects-heading" data-reveal>A Kitchen for<br><em>Every Vision</em></h2>
+    <div class="divider divider-center" data-reveal></div>
+  </div>
+  <div class="projects-grid" role="list">
+    <div class="project-item" role="listitem" data-reveal>
+      <img src="images/work-1.webp" alt="Modern L-shaped modular kitchen Dwarka" loading="lazy">
+      <div class="project-overlay"></div>
+      <p class="project-name">Modern L-Shape &mdash; Dwarka Sec 12</p>
+    </div>
+    <div class="project-item" role="listitem" data-reveal>
+      <img src="images/work-2.webp" alt="Parallel kitchen with island Delhi" loading="lazy">
+      <div class="project-overlay"></div>
+      <p class="project-name">Parallel Kitchen &mdash; Janakpuri</p>
+    </div>
+    <div class="project-item" role="listitem" data-reveal>
+      <img src="images/work-3.webp" alt="U-shaped kitchen interior design Delhi" loading="lazy">
+      <div class="project-overlay"></div>
+      <p class="project-name">U-Shape Premium &mdash; Rohini</p>
+    </div>
+    <div class="project-item" role="listitem" data-reveal>
+      <img src="images/work-4.webp" alt="White minimalist kitchen Dwarka Delhi" loading="lazy">
+      <div class="project-overlay"></div>
+      <p class="project-name">Minimalist White &mdash; Dwarka Sec 6</p>
+    </div>
+    <div class="project-item" role="listitem" data-reveal>
+      <img src="images/work-5.webp" alt="Dark tone modular kitchen" loading="lazy">
+      <div class="project-overlay"></div>
+      <p class="project-name">Dark Walnut Finish &mdash; Palam</p>
+    </div>
+    <div class="project-item" role="listitem" data-reveal>
+      <img src="images/work-6.webp" alt="Open kitchen with dining area" loading="lazy">
+      <div class="project-overlay"></div>
+      <p class="project-name">Open Kitchen &mdash; Uttam Nagar</p>
+    </div>
+    <div class="project-item" role="listitem" data-reveal>
+      <img src="images/work-7.webp" alt="Compact kitchen small apartment Delhi" loading="lazy">
+      <div class="project-overlay"></div>
+      <p class="project-name">Compact Studio &mdash; Dwarka Sec 4</p>
+    </div>
+    <div class="project-item" role="listitem" data-reveal>
+      <img src="images/work-8.webp" alt="Luxury kitchen interior Dwarka" loading="lazy">
+      <div class="project-overlay"></div>
+      <p class="project-name">Luxury Finish &mdash; Rajouri Garden</p>
+    </div>
+  </div>
+  <div class="text-center mt-5" data-reveal>
+    <a href="project.html" class="btn btn-outline-dark">View All Projects</a>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section section-cream" aria-labelledby="reviews-heading">
+  <div class="container text-center" style="margin-bottom:3rem">
+    <span class="section-label" data-reveal>Client Reviews</span>
+    <h2 class="section-title" id="reviews-heading" data-reveal>What Our Customers Say</h2>
+    <div class="divider divider-center" data-reveal></div>
+  </div>
+  <div class="container">
+    <div class="testi-grid" role="list">
+      <article class="testi-card" data-reveal role="listitem">
+        <div class="testi-quote">&ldquo;</div>
+        <p class="testi-text">Modular Kitchen transformed our small Dwarka flat kitchen completely. The team measured everything precisely, suggested a magic corner unit we didn&rsquo;t even know existed, and delivered on time. Absolutely love it.</p>
+        <div class="testi-author">
+          <img src="images/person_1.webp" alt="Priya Sharma" class="testi-avatar" loading="lazy">
+          <div>
+            <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <div class="testi-name">Priya Sharma</div>
+            <div class="testi-role">Homeowner, Dwarka Sector 12</div>
+          </div>
+        </div>
+      </article>
+      <article class="testi-card" data-reveal role="listitem">
+        <div class="testi-quote">&ldquo;</div>
+        <p class="testi-text">Best decision we made for our new home. The quality of materials is excellent — no cheap MDF shortcuts. Our U-shaped kitchen looks straight out of a magazine. Highly recommend Modular Kitchen to anyone in Delhi.</p>
+        <div class="testi-author">
+          <img src="images/person_2.webp" alt="Rajesh Gupta" class="testi-avatar" loading="lazy">
+          <div>
+            <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <div class="testi-name">Rajesh Gupta</div>
+            <div class="testi-role">Software Engineer, Rohini</div>
+          </div>
+        </div>
+      </article>
+      <article class="testi-card" data-reveal role="listitem">
+        <div class="testi-quote">&ldquo;</div>
+        <p class="testi-text">I was worried about managing the kitchen work while staying in the house. The team was professional, clean and finished everything in just 8 days. The parallel kitchen layout they suggested is perfect for Indian cooking.</p>
+        <div class="testi-author">
+          <img src="images/person_3.webp" alt="Ananya Iyer" class="testi-avatar" loading="lazy">
+          <div>
+            <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <div class="testi-name">Ananya Iyer</div>
+            <div class="testi-role">Teacher, Janakpuri</div>
+          </div>
+        </div>
+      </article>
+    </div>
+    <div class="text-center mt-5" data-reveal>
+      <a href="contact.html" class="btn btn-dark">Book a Free Consultation</a>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG PREVIEW -->
+<section class="section" aria-labelledby="blog-heading">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:3rem">
+      <span class="section-label" data-reveal>Kitchen Tips &amp; Insights</span>
+      <h2 class="section-title" id="blog-heading" data-reveal>From Our Blog</h2>
+      <div class="divider divider-center" data-reveal></div>
+    </div>
+    <div class="blog-grid" id="blog-preview" style="grid-template-columns:repeat(2,1fr)" aria-live="polite">
+      <!-- Loaded by JS from data/blogs.json -->
+      <p style="color:var(--muted);font-size:.9rem">Loading articles&hellip;</p>
+    </div>
+    <div class="text-center mt-5" data-reveal>
+      <a href="blog.html" class="btn btn-outline-dark">Read All Articles</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA STRIP -->
+<section class="cta-strip" aria-labelledby="cta-heading">
+  <h2 id="cta-heading" data-reveal>Ready to Transform<br><em>Your Kitchen?</em></h2>
+  <p data-reveal>Get a free home visit and consultation — no obligation, no pressure.</p>
+  <div data-reveal style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+    <a href="contact.html" class="btn btn-gold">Book Free Home Visit</a>
+    <a href="mailto:modularkitchenwaale@gmail.com" class="btn btn-outline">Email Us</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer" aria-label="Site footer">
+  <div class="footer-grid container">
+    <div>
+      <p class="footer-brand-name">Modular Kitchen</p>
+      <p class="footer-brand-desc">Premium modular kitchens designed and installed across Dwarka and Delhi NCR. Trusted by 351+ Indian families since 2006.</p>
+      <div class="footer-social">
+        <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+        <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <a href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div>
+      <p class="footer-heading">Quick Links</p>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="project.html">Projects</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer-heading">Services</p>
+      <ul class="footer-links">
+        <li><a href="services.html">Kitchen Design</a></li>
+        <li><a href="services.html">3D Visualization</a></li>
+        <li><a href="services.html">Manufacturing</a></li>
+        <li><a href="services.html">Installation</a></li>
+        <li><a href="services.html">After-Sales Support</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer-heading">Contact Us</p>
+      <div class="footer-contact-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span>Dwarka, New Delhi, India</span>
+      </div>
+      <div class="footer-contact-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        <a href="mailto:modularkitchenwaale@gmail.com" style="color:inherit">modularkitchenwaale@gmail.com</a>
+      </div>
+      <div class="footer-contact-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+        <span>Mon–Sat, 9am – 6pm</span>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom container">
+    <p class="footer-copy">&copy; <script>document.write(new Date().getFullYear())</script> Modular Kitchen. All rights reserved.</p>
+    <div class="footer-legal">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Use</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/mk.js"></script>
 </body>
 </html>
