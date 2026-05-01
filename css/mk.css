@@ -42,16 +42,40 @@ ul{list-style:none}
 .nav-cta:hover{background:var(--dark)!important;color:#fff!important}
 
 /* hamburger */
-.nav-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none;border-radius:4px;-webkit-tap-highlight-color:transparent}
-.nav-toggle span{width:24px;height:2px;background:#fff;transition:.3s;display:block;border-radius:2px}
+.nav-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none;border-radius:4px;-webkit-tap-highlight-color:transparent;z-index:1001;position:relative}
+.nav-toggle span{width:24px;height:2px;background:#fff;transition:transform .35s ease,opacity .35s ease,top .35s ease;display:block;border-radius:2px;position:relative}
 .site-nav.scrolled .nav-toggle span{background:var(--dark)}
-/* Mobile full-screen overlay */
-.nav-mobile{display:none;position:fixed;inset:0;background:rgba(10,10,10,.97);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:1.8rem;padding:2rem}
-.nav-mobile.open{display:flex}
-.nav-mobile a{font-family:var(--serif);font-size:1.8rem;color:#fff;letter-spacing:.04em;transition:color .2s;text-align:center}
+/* Animated hamburger → X */
+.nav-toggle.is-open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-toggle.is-open span:nth-child(2){opacity:0;transform:scaleX(0)}
+.nav-toggle.is-open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+/* Mobile full-screen overlay — uses opacity/visibility so CSS transition works on close */
+.nav-mobile{
+  display:flex;
+  position:fixed;inset:0;
+  background:rgba(10,10,10,.97);
+  z-index:1000;
+  flex-direction:column;align-items:center;justify-content:center;gap:1.8rem;padding:2rem;
+  opacity:0;visibility:hidden;
+  transition:opacity .35s ease,visibility .35s ease;
+}
+.nav-mobile.open{opacity:1;visibility:visible}
+.nav-mobile a{
+  font-family:var(--serif);font-size:1.8rem;color:#fff;
+  letter-spacing:.04em;transition:color .2s,transform .2s;text-align:center;
+  transform:translateY(12px);opacity:0;
+  transition:color .2s,transform .4s ease,opacity .4s ease;
+}
+.nav-mobile.open a{transform:translateY(0);opacity:1}
+.nav-mobile.open a:nth-child(2){transition-delay:.05s}
+.nav-mobile.open a:nth-child(3){transition-delay:.1s}
+.nav-mobile.open a:nth-child(4){transition-delay:.15s}
+.nav-mobile.open a:nth-child(5){transition-delay:.2s}
+.nav-mobile.open a:nth-child(6){transition-delay:.25s}
+.nav-mobile.open a:nth-child(7){transition-delay:.3s}
 .nav-mobile a:hover,.nav-mobile a.active{color:var(--gold-light)}
-.nav-close{position:absolute;top:1.5rem;right:5%;font-size:2.2rem;color:rgba(255,255,255,.7);cursor:pointer;background:none;border:none;line-height:1;padding:.5rem;-webkit-tap-highlight-color:transparent}
-.nav-close:hover{color:#fff}
+.nav-close{position:absolute;top:1.5rem;right:5%;font-size:2.2rem;color:rgba(255,255,255,.7);cursor:pointer;background:none;border:none;line-height:1;padding:.5rem;-webkit-tap-highlight-color:transparent;transition:color .2s,transform .2s}
+.nav-close:hover{color:#fff;transform:rotate(90deg)}
 
 /* ── HERO ── */
 .hero{position:relative;height:100vh;min-height:600px;overflow:hidden}
@@ -275,3 +299,35 @@ ul{list-style:none}
 [data-reveal="left"]{transform:translateX(-28px)}
 [data-reveal="right"]{transform:translateX(28px)}
 [data-reveal="left"].revealed,[data-reveal="right"].revealed{transform:none}
+
+/* ── SCROLL PROGRESS BAR ── */
+#scroll-progress{
+  position:fixed;top:0;left:0;height:3px;
+  background:linear-gradient(90deg,var(--gold),var(--gold-light));
+  width:0%;z-index:2000;transition:width .1s linear;
+  pointer-events:none;
+}
+
+/* ── FLOATING BUTTONS ── */
+.float-group{position:fixed;bottom:2rem;right:1.5rem;display:flex;flex-direction:column;gap:.8rem;z-index:900;align-items:center}
+.float-wa{
+  width:52px;height:52px;border-radius:50%;
+  background:#25D366;color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 4px 20px rgba(37,211,102,.4);
+  transition:transform .3s,box-shadow .3s;
+  text-decoration:none;
+}
+.float-wa:hover{transform:scale(1.1);box-shadow:0 6px 28px rgba(37,211,102,.55)}
+.float-top{
+  width:44px;height:44px;border-radius:50%;
+  background:#fff;color:var(--dark);
+  border:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;box-shadow:0 2px 12px rgba(0,0,0,.1);
+  transition:transform .3s,background .3s,opacity .3s;
+  opacity:0;pointer-events:none;
+  font-size:1rem;
+}
+.float-top.visible{opacity:1;pointer-events:auto}
+.float-top:hover{background:var(--dark);color:#fff;transform:translateY(-3px)}
